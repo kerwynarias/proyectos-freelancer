@@ -1,0 +1,230 @@
+/*estilo de colores que voy agregar */
+:root {
+  --primary: #a905b6;
+  --white: #ffff;
+  --black: #212121;
+  --blue: #0097a7;
+}
+
+/*defino tamaños para la tipografia*/
+h1 {
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+/*selectores para cambiar de pixeles a rem*/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16.5px;
+  font-family: "Krub", sans-serif; /*aplica la fuenta a too el documento*/
+}
+
+.titulo span {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.boton {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1rem 3rem;
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.6rem;
+  width: 90%;
+  text-align: center;
+  border: none;
+}
+@media (min-width: 780px) {
+  .boton {
+    width: auto;
+  }
+}
+.boton:hover {
+  cursor: pointer;
+}
+
+/*sombra de cssmatic*/
+.sombra {
+  box-shadow: 0px 5px 15px -1px rgba(89, 89, 89, 1);
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.nav-bg {
+  background-color: var(--primary);
+}
+
+/*navegacion principal */
+.narvar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*si la medida el menor a 780px lo coloca por defecto en row*/
+@media (min-width: 780px) {
+  .narvar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.narvar a {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.narvar a:hover {
+  color: var(--primary);
+  background-color: var(--blue);
+}
+
+.hero {
+  background-image: url(../img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.container-hero {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(0 0 0 70%);
+  width: 100%;
+  height: 100%;
+  /*alinio vertical y horizontalmente*/
+  display: flex; /*alinea horizontal con justifail conten*/
+  flex-direction: column;
+  align-items: center; /*alineas verticalmente*/
+  justify-content: center;
+}
+
+.container-hero h2,
+.container-hero p {
+  color: var(--white);
+}
+
+.direccion {
+  display: flex;
+  align-items: flex-end;
+}
+
+/** Servicios**/
+@media (min-width: 780px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicio h3 {
+  color: var(--black);
+  font-weight: normal;
+}
+.servicio p {
+  /*entrelineado*/
+  line-height: 2;
+  text-align: center;
+}
+
+.servicio .iconos {
+  height: 15rem;
+  width: 15rem;
+  background-color: var(--blue);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**formulario**/
+
+.formulario {
+  background-color: var(--blue);
+  width: min(60rem, 100%);
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 0.6rem;
+}
+
+.formulario fieldset {
+  border: none;
+}
+.formulario legend {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+/* @media (min-width: 780px) {
+  .contenedor-campo {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 1rem;
+  }
+} */
+
+.campo {
+  margin-bottom: 1rem;
+}
+.campo label {
+  color: var(--white);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  display: block;
+}
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.campo textarea {
+  height: 20rem;
+}
+
+.footer {
+  text-align: center;
+}
